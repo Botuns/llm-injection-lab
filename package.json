@@ -1,0 +1,30 @@
+{
+  "name": "llm-injection-lab",
+  "version": "0.1.0",
+  "description": "A small, deterministic harness for testing LLM apps against direct and indirect prompt injection, system prompt leakage, markdown exfiltration and tool hijacking.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AbdulQahar Olajide Dolapo",
+  "keywords": [
+    "llm",
+    "prompt-injection",
+    "ai-security",
+    "red-teaming",
+    "owasp-llm-top-10"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "attack": "tsx src/cli.ts",
+    "compare": "tsx src/cli.ts --compare",
+    "scenarios": "tsx src/cli.ts --list",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
